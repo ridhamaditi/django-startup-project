@@ -1,0 +1,10 @@
+#include<stdio.h>
+#define MAX 45
+void main()
+{
+#if MAX > 40
+printf("Yes, MAX is greater then 40.");
+#else
+printf("No, MAX is not greater then 40.");
+#endif
+}
