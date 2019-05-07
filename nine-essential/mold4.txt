@@ -1,0 +1,10 @@
+#include<stdio.h>
+#define MKS 65
+void main()
+{
+#ifndef MAX
+printf("\nMAX is not defined.");
+#else
+printf("\nMAX is defined.");
+#endif
+}
