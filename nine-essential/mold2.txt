@@ -1,0 +1,14 @@
+#include<stdio.h>
+#define MKS 65
+void main()
+{
+#if MKS>=78
+printf("\nGrade A");
+#elif MKS>=50
+printf("\nGrade B");
+#elif MKS>=25
+printf("\nGrade C");
+#else
+printf("\nGrade D");
+#endif
+}
