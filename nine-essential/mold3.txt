@@ -1,0 +1,10 @@
+#include<stdio.h>
+#define MKS 65
+void main()
+{
+#ifdef MONTH
+printf("\nMONTH is defined.");
+#else
+printf("\nMONTH is not defined.");
+#endif
+}
