@@ -1,0 +1,8 @@
+library(e1071)
+data("iris")
+dataset<-iris
+dataset<-dataset[sample(nrow(dataset)),]
+dataset.train<-dataset[1:100,]
+dataset.test<-dataset[101:nrow(dataset),]
+NB<-naiveBayes(Species ~., data=dataset.train)
+table(predict(NB,dataset.test),dataset.test$Species)
