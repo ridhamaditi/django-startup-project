@@ -1,0 +1,5 @@
+x <- c(1:10,20,30)
+
+boxplot.stats(x)$out
+
+boxplot.stats(x)
