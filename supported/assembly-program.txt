@@ -1,5 +1,0 @@
-a = b + c
-add = a + b
-mul = b * c
-div = a / c
-sub = c - d
