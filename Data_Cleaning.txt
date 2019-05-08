@@ -1,0 +1,19 @@
+PATH<-"https://raw.githubusercontent.com/thomaspernet/data_csv_r/master/data/titanic_csv.csv"
+
+df_titanic<-read.csv(PATH,sep=",")
+
+list_na<-colnames(df_titanic)[apply(df_titanic,2,anyNA)]
+
+list_na
+
+library(dplyr)
+
+average_missing<-apply(df_titanic[,colnames(df_titanic)%in% list_na],2,mean,na.rm=TRUE)
+
+average_missing
+
+df_titanic_replace<-df_titanic %>% mutate(replace_mean_age=ifelse(is.na(age),average_missing[1],age),replace_mean_fare=ifelse(is.na(fare),average_missing[2],fare))
+
+sum(is.na(df_titanic_replace$age))
+
+sum(is.na(df_titanic_replace$replace_mean_age))
