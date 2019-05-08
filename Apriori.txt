@@ -1,0 +1,10 @@
+library(arules)
+
+data("Groceries")
+inspect(head(Groceries,5))
+
+rules <- apriori(Groceries, parameter = list(supp = 0.001,conf = 0.5))
+
+rules_conf <- sort(rules, by="confidence",decreasing = TRUE)
+
+inspect(head(rules_conf,6))
