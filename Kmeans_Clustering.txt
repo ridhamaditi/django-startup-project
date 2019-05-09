@@ -1,6 +1,0 @@
-library(ggplot2)
-dataset<-iris
-ggplot(dataset, aes(dataset$Petal.Length, dataset$Petal.Width, color=dataset$Species)) + geom_point()
-
-clusters <- kmeans(dataset[,3:4], 3, nstart = 20)
-table(clusters$cluster,dataset$Species)
