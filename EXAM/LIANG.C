@@ -14,7 +14,7 @@ void main(){
 	ymin=100;
 	xmax=250;
 	ymax=250;
-	initgraph(&gd,&gm,” ");
+	initgraph(&gd,&gm, "");
 	rectangle(xmin,ymin,xmax,ymax);
 	dx=x2-x1;
 	dy=y2-y1;
